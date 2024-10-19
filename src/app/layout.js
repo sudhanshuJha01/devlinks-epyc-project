@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${font.className} text-darkgray text-base`}>
+      <body className={`${font.className} bg-slate-100 text-darkgray text-base`}>
         {children}
       </body>
     </html>

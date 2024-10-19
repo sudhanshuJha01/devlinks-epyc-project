@@ -4,9 +4,10 @@ import Button from "../buttons/Button.jsx";
 const NavBar = () => {
   return (
     <nav
-      className="bg-white text-black p-4 px-6  flex items-center
+      className="bg-white text-black p-4 pl-6  flex items-center
     justify-between
-    w-[1392px] h-[78px] rounded-lg m-6 "
+     rounded-lg m-6 mb-3 w-[1392px] h-[78px]"
+     
     >
       <figure>
         <Image
