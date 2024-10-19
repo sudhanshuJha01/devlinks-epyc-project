@@ -6,11 +6,11 @@ const NavBar = () => {
     <nav
       className="bg-white text-black p-4 pl-6  flex items-center
     justify-between
-     rounded-lg  mb-3 min-w-full"
+     rounded-lg  mb-3 w-full h-[10%]"
     >
       <figure>
         <Image
-          src="images/logo-devlinks-large.svg" 
+          src="images/logo-devlinks-large.svg"
           alt="Devlinks Logo"
           width={146}
           height={32}

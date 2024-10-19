@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const BeforeEvent = () => {
   return (
-    <section className="text-center flex flex-col items-center justify-between my-[42.5px] gap-10">
+    <section className="text-center flex flex-col items-center justify-between my-[42.5px] gap-10 ">
     <Image
       src={"/images/illustration-empty.svg"}
       height={160}
       width={249.53}
     />
-    <article className=" w-[70%]">
+    <article className=" w-[70%] ">
       <h3 className="font-bold text-[32px] mb-3 text-[#333333]">
         Let’s get you started
       </h3>
