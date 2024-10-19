@@ -1,24 +1,23 @@
 import Image from "next/image";
-import LogoButton from "../buttons/LogoButton.jsx";
-import Button from "../buttons/Button.jsx";
+import LogoButton from "@/components/buttons/LogoButton.jsx";
+import Button from "@/components/buttons/Button.jsx";
 const NavBar = () => {
   return (
     <nav
       className="bg-white text-black p-4 pl-6  flex items-center
     justify-between
-     rounded-lg m-6 mb-3 w-[1392px] h-[78px]"
-     
+     rounded-lg  mb-3 min-w-full"
     >
       <figure>
         <Image
-          src="images/logo-devlinks-large.svg" // Ensure this path is correct
+          src="images/logo-devlinks-large.svg" 
           alt="Devlinks Logo"
           width={146}
           height={32}
           className="hidden md:block"
         />
         <Image
-          src="/images/logo-devlinks-small.svg" // Ensure this path is correct
+          src="/images/logo-devlinks-small.svg"
           alt="Devlinks Logo"
           width={32}
           height={32}
