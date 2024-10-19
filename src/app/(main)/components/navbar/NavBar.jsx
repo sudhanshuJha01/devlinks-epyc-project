@@ -54,7 +54,7 @@ const NavBar = () => {
         className={
           " border-x border-y border-[#633CFF]  text-[#633CFF] w-[114px] h-[46px] rounded-lg px-[27px] py-[11px] "
         }
-        classT={"w-[60px] h-[24px]"}
+        classT={"w-[60px] h-[24px] text-base font-semibold"}
       />
     </nav>
   );
