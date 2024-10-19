@@ -1,7 +1,7 @@
-"use client"
-const Button = ({ className,label, classT}) => {
+"use client";
+const Button = ({ className,label, classT , onClick}) => {
   return (
-    <button className={`${className }`}>
+    <button onClick={onClick} className={`${className }`}>
         <span className={classT}>{label}</span>
     </button>
   )

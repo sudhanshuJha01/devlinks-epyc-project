@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
-const LogoButton = ({ className, label, imgHref, imageClass, type, w, h ,textClass }) => {
+const LogoButton = ({ className, label, imgHref, imageClass, type, w, h ,textClass , onClick }) => {
   return (
-    <div className={` ${className} flex items-center justify-center `}>
+    <div 
+    onClick={onClick}
+    className={` ${className} flex items-center justify-center cursor-pointer `}>
         <Image
           src={imgHref} // Ensure this path is correct
           alt={type}
