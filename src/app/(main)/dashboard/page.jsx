@@ -24,7 +24,7 @@ const dashboard = () => {
           </article>
           <Button
             className={
-              "mt-5 w-[728px] h-[46px] text-center  text-[#633CFF]  border-2 border-[#633CFF] rounded-lg"
+              "mt-5 mb-3 w-[728px] h-[46px] text-center  text-[#633CFF]  border-2 border-[#633CFF] rounded-lg"
             }
             classT={"w-[108px] h-[24px] font-semibold text-[16px]"}
             label={"+ Add new link"}
