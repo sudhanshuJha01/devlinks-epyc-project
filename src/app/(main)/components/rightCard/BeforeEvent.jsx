@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BeforeEvent = () => {
   return (
-    <section className="text-center flex flex-col items-center justify-between my-[42.5px] gap-10 ">
+    <section className="text-center  flex flex-col items-center justify-between my-[42.5px] gap-10 ">
     <Image
       src={"/images/illustration-empty.svg"}
       height={160}
