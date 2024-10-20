@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Devlinks
 
-## Getting Started
+A fully functional web application built using **Next.js**. Devlinks allows users to create, manage, and reorder links, providing a simple yet powerful way to organize and share resources. The project focuses on design precision, responsiveness, and interactive features, with the option to integrate user authentication and database storage.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Link Management (CRUD)**: Create, read, update, and delete links.
+- **Drag-and-Drop Reordering**: Easily reorder links using a drag-and-drop interface.
+- **Responsive Design**: Fully responsive layout ensuring compatibility across devices.
+- **Validations**: Form validations for link creation and editing.
+- **Hover and Focus States**: Interactive UI with hover and focus states for improved usability.
+- **Pixel-Perfect Design**: Layout adheres to the provided Figma design specifications.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Bonus Features
+- **User Authentication**: Optional feature to allow users to create accounts and manage personalized links.
+- **Database Integration**: Optional integration with a database (e.g., MongoDB) to persist data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can view the live demo of the project here: [Devlinks Live Demo](https://devlinks-epyc-project-ln84.vercel.app/dashboard)
 
-## Learn More
+## Screenshots
 
-To learn more about Next.js, take a look at the following resources:
+![Devlinks Screenshot](#)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js**: A React-based framework for building web applications.
+- **Zustand**: Lightweight state management solution.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React DnD**: Library for drag-and-drop interactions.
+- **Node.js**: Backend for optional API routes and database integration.
+- **MongoDB**: (Optional) Database for storing links and user data.
 
-## Deploy on Vercel
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Prerequisites
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Node.js**: Ensure Node.js is installed on your system. You can download it [here](https://nodejs.org/).
+- **Git**: For version control and cloning the repository.
+- **MongoDB**: (Optional) For storing link data if database functionality is implemented.
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/devlinks.git
