@@ -1,0 +1,65 @@
+[33mcommit b22dcd28adabac53120e4785e2cb008e36ac3bf2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sun Oct 20 02:43:02 2024 +0530
+
+    working on functionality
+
+[33mcommit bf72d1d39cbbaa8d7b295c68a19f8c09828db33f[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sun Oct 20 02:24:03 2024 +0530
+
+    form created
+
+[33mcommit ec2d9d4eeddf732b0681e0e966fce7cbed5dab25[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sun Oct 20 00:26:52 2024 +0530
+
+    dashboard ui ready
+
+[33mcommit 0310a093c14ae46fc88346f700a26c14d0102454[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sun Oct 20 00:24:03 2024 +0530
+
+    dashboard bugs updated
+
+[33mcommit a8f9fb24bdbbcda4deb3e34e93a5bffe8f5f3138[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sat Oct 19 23:44:36 2024 +0530
+
+    tried to make it pixel perfect design
+
+[33mcommit a03ec651c217860d85beaa4f0ea4d4cace90125b[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sat Oct 19 21:46:43 2024 +0530
+
+    little update and checkpoint
+
+[33mcommit 2f42259786965e545ac3cf72f2283f5555dee1f8[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sat Oct 19 19:59:12 2024 +0530
+
+    desktop ui completed
+
+[33mcommit 94c06642edc889af07f0c8b382c49a0a512cdc42[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sat Oct 19 16:22:57 2024 +0530
+
+    navBar created
+
+[33mcommit 567adc690adedea8d147370ab961e609529fbfb6[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sat Oct 19 13:18:39 2024 +0530
+
+    setup developed
+
+[33mcommit b467e75776fde734c282f58ec68f0409041a397a[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sat Oct 19 12:43:52 2024 +0530
+
+    file structure changed
+
+[33mcommit b36eae75f9abf4a019fbab4f54180b6136f75211[m
+Author: sudhanshuJha01 <sudhanshujha883@gmail.com>
+Date:   Sat Oct 19 12:09:06 2024 +0530
+
+    Initial commit from Create Next App

@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Button from "@/components/buttons/Button.jsx";
 const LowerSection = () => {
   return (
