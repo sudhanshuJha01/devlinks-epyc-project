@@ -10,9 +10,6 @@ const AddLinkBtn = () => {
     const handleAddLink = ()=>{
       setLinkCnt(linkCnt+1)
       addLink(linkCnt);
-      console.log(links);
-      console.log(linkCnt);
-        console.log("hello");
         
     }
   return (

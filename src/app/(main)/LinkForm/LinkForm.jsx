@@ -2,12 +2,15 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import optionData from "@/lib/config/optionData.js";
-
-const LinkForm = () => {
+import {useLinkStore} from "@/lib/store/linkSore.js";
+const LinkForm = ({ link}) => {
   const [selectedOption, setSelectedOption] = useState(optionData[0]?.value);
-
+  const removeLink = useLinkStore((state) => state.removeLink);
   const handleRemove = () => {
-    console.log("Remove");
+    removeLink(link.id);
+    console.log("id"+link.id);
+    console.log("value"+link.value);
+    
   }
 
   // Find the selected option's icon to display
@@ -25,7 +28,7 @@ const LinkForm = () => {
             width={12}
             height={6}
           />
-          <h2 className="font-bold text-base ">Link #1</h2>
+          <h2 className="font-bold text-base ">Link #{link.value}</h2>
         </section>
         <span onClick={handleRemove} className="text-base cursor-pointer">Remove</span>
       </section>
