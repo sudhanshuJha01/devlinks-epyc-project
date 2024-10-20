@@ -30,7 +30,7 @@ const NavBar = () => {
         <Link href={'/dashboard'}>    
         <LogoButton
           className={
-            "bg-[#EFEBFF] max-md:hidden w-[122px] h-[46px] border-2  gap-1 rounded-lg px-[27px] py-[11px]"
+            " max-md:hidden w-[122px] h-[46px] border-2  gap-1 rounded-lg px-[27px] py-[11px]"
           }
           textClass={"font-semibold text-[#633CFF] text-base w-[40px] h-[24px]"}
           imageClass={"text-[#633CFF]"}
