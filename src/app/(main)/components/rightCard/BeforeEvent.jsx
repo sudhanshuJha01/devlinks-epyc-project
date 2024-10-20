@@ -6,6 +6,7 @@ const BeforeEvent = () => {
     <Image
       src={"/images/illustration-empty.svg"}
       height={160}
+      alt="logo"
       width={249.53}
     />
     <article className=" w-[70%] ">

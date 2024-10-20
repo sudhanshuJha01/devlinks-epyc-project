@@ -4,7 +4,7 @@ import LinkFormContainer from "./LinkFormContainer.jsx"; // Client Component (if
 
 const UpperSection = () => {
   return (
-    <section className="w-full h-[88%] p-10 border-b-2">
+    <section className="w-full h-[88%] p-4 md:p-10  border-b-2">
       <article className="mb-5">
         <h1 className="text-3xl font-bold text-[#333333] mb-1">
           Customize your links

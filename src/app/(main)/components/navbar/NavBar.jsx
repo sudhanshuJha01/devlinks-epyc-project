@@ -12,6 +12,7 @@ const NavBar = () => {
       <figure>
         <Image
           src="images/logo-devlinks-large.svg"
+          
           alt="Devlinks Logo"
           width={146}
           height={32}
@@ -34,6 +35,7 @@ const NavBar = () => {
           textClass={"font-semibold text-[#633CFF] text-base w-[40px] h-[24px]"}
           imageClass={"text-[#633CFF]"}
           label={"Link"}
+          type="logo"
           imgHref={"/images/icon-link.svg"}
           w={20}
           h={20}
@@ -47,6 +49,7 @@ const NavBar = () => {
           textClass={"font-semibold text-[#633CFF] text-base w-[40px] h-[24px]"}
           imageClass={"text-[#633CFF]"}
           imgHref={"/images/icon-link.svg"}
+          type="logo"
           w={20}
           h={20}
         />
@@ -63,6 +66,7 @@ const NavBar = () => {
           label={"Profile Details"}
           imgHref={"images/icon-profile-details-header.svg"}
           w={20}
+          type="logo"
           h={20}
         />
         <LogoButton
@@ -75,6 +79,7 @@ const NavBar = () => {
           imgHref={"images/icon-profile-details-header.svg"}
           w={20}
           h={20}
+          type="logo"
         />
         </Link>
       </div>
@@ -89,6 +94,7 @@ const NavBar = () => {
       </Link>
   <Link className="sm:hidden" href={'/preview'}>  
          <LogoButton
+         type="logo"
           className={
             "border-x border-y border-[#633CFF] sm:hidden text-[#633CFF] w-[52px] h-[42px] rounded-lg px-[16px] py-[11px] "
           }
