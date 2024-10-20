@@ -1,10 +1,10 @@
 import { create } from 'zustand';
-import { nanoid } from 'nanoid'; 
+
 export const useLinkDataStore = create((set) => ({
-    data:[],
-    addPlatfrom: (obj) => {
-        set((state) => ({
-            data:[...state.data, ...obj],
-        }));
-    }
+  data: [],
+  addPlatform: (obj) => {
+    set((state) => ({
+      data: [...state.data, obj], // Spread state.data correctly
+    }));
+  },
 }));
