@@ -7,8 +7,8 @@ const LinkFormContainer = () => {
   return (
     <section className="mt-3 p-5 w-full bg-[#FAFAFA] rounded-lg h-[500px] overflow-scroll">
       {/* Render multiple forms */}
-     {links?.map((link)=>{
-        return <LinkForm key={link.id} link={link} />
+     {links?.map((link , index)=>{
+        return <LinkForm key={link.id} link={link} index={index}/>
      })}
     </section>
   );

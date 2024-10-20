@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import optionData from "@/lib/config/optionData.js";
 import {useLinkStore} from "@/lib/store/linkSore.js";
-const LinkForm = ({ link}) => {
+const LinkForm = ({ link , index}) => {
   const [selectedOption, setSelectedOption] = useState(optionData[0]?.value);
   const removeLink = useLinkStore((state) => state.removeLink);
   const handleRemove = () => {
@@ -28,7 +28,7 @@ const LinkForm = ({ link}) => {
             width={12}
             height={6}
           />
-          <h2 className="font-bold text-base ">Link #{link.value}</h2>
+          <h2 className="font-bold text-base ">Link #{index+1}</h2>
         </section>
         <span onClick={handleRemove} className="text-base cursor-pointer">Remove</span>
       </section>
