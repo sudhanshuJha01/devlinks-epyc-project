@@ -23,7 +23,7 @@ const PhoneMokeUp = ({ index }) => {
       {len < 5 ? (
         <section className="flex flex-col items-center justify-center gap-5 ">
           {data["1"] ? (
-            <RectangularComponent content={data["1"].name} />
+            <RectangularComponent  content={data["1"].name} />
           ) : (
             <RectangularComponent />
           )}
@@ -46,7 +46,7 @@ const PhoneMokeUp = ({ index }) => {
       ) : (
         <section className="flex flex-col items-center justify-center gap-5 overflow-y-scroll">
           {arr.map(item=>(
-             <RectangularComponent content={data[item].name} />
+             <RectangularComponent key={item} content={data[item].name} />
           ))}
         </section>
       )}
