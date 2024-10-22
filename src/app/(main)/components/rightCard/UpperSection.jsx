@@ -1,6 +1,6 @@
-// UpperSection.jsx (Server Component if no interactivity required here)
-import AddLinkBtn from "./AddLinkBtn.jsx"; // Client Component
-import LinkFormContainer from "./LinkFormContainer.jsx"; // Client Component (if it handles forms)
+
+import AddLinkBtn from "./AddLinkBtn.jsx";
+import LinkFormContainer from "./LinkFormContainer.jsx"; 
 
 const UpperSection = () => {
   return (
@@ -10,11 +10,11 @@ const UpperSection = () => {
           Customize your links
         </h1>
         <p className="text-base text-[#737373] mt-1">
-          Add/edit/remove links below and then share all your profiles with the world!
+          
         </p>
       </article>
-      <AddLinkBtn /> {/* Make sure this is a client component */}
-      <LinkFormContainer /> {/* Same for LinkFormContainer */}
+      <AddLinkBtn /> 
+      <LinkFormContainer /> 
     </section>
   );
 };

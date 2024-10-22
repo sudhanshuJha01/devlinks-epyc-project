@@ -2,7 +2,7 @@
 import React , {useState} from 'react'
 import Button from "@/components/buttons/Button.jsx";
 import {useLinkStore} from "@/lib/store/linkSore.js";
-const AddLinkBtn = () => {
+const AddLinkBtn = ({setCnt , cnt}) => {
   const [linkCnt , setLinkCnt] = useState(0)
     const addLink = useLinkStore((state) => state.addLink);
     const handleAddLink = ()=>{

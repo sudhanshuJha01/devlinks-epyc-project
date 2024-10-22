@@ -4,22 +4,24 @@ import Image from "next/image";
 import optionData from "@/lib/config/optionData.js";
 import { useLinkStore } from "@/lib/store/linkSore.js";
 import { useLinkDataStore } from "@/lib/store/linkData.js";
-
+import {useIndexStore} from "@/lib/store/indexData.js"
 const LinkForm = ({ link, index }) => {
   const [selectedOption, setSelectedOption] = useState(optionData[0]?.value);
   const removeLink = useLinkStore((state) => state.removeLink);
   const addPlatform = useLinkDataStore((state) => state.addPlatform);
-
+  const   presentIndex  = useIndexStore(state=>state.presentIndex)
+  const   setPresentIndex= useIndexStore(state=>state.setPresentIndex)
   const handleRemove = () => {
     removeLink(link.id);
   };
-
+  
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
-    addPlatform(e.target.value); // Call addPlatform with the selected value
+    addPlatform(e.target.value);
+    console.log("present Index",presentIndex);
+    setPresentIndex(index+1)
   };
 
-  // Find the selected option's icon to display
   const selectedPlatform = optionData.find(
     (item) => item.value === selectedOption
   );
@@ -36,7 +38,10 @@ const LinkForm = ({ link, index }) => {
           />
           <h2 className="font-bold text-base ">Link #{index + 1}</h2>
         </section>
-        <span onClick={handleRemove} className="text-base cursor-pointer">
+        <span
+          onClick={handleRemove}
+          className="text-base cursor-pointer hover:text-[#4c4c4c]"
+        >
           Remove
         </span>
       </section>
@@ -85,7 +90,3 @@ const LinkForm = ({ link, index }) => {
 };
 
 export default LinkForm;
-
-
-
-
