@@ -24,7 +24,7 @@ const SvgComponent = () => {
       
       {/* Using foreignObject to embed React component */}
       <foreignObject x="38" y="55" width="284" height="521">
-        <div xmlns="http://www.w3.org/1999/xhtml">
+        <div  xmlns="http://www.w3.org/1999/xhtml">
           <PhoneMokeUp />
         </div>
       </foreignObject>

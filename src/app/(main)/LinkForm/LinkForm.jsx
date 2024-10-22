@@ -1,26 +1,34 @@
 "use client";
 import React, { useState } from "react";
+
 import Image from "next/image";
 import optionData from "@/lib/config/optionData.js";
 import { useLinkStore } from "@/lib/store/linkSore.js";
 import { useLinkDataStore } from "@/lib/store/linkData.js";
-import {useIndexStore} from "@/lib/store/indexData.js"
+
 const LinkForm = ({ link, index }) => {
   const [selectedOption, setSelectedOption] = useState(optionData[0]?.value);
   const removeLink = useLinkStore((state) => state.removeLink);
   const addPlatform = useLinkDataStore((state) => state.addPlatform);
-  const   presentIndex  = useIndexStore(state=>state.presentIndex)
-  const   setPresentIndex= useIndexStore(state=>state.setPresentIndex)
+  const presentIndex = useLinkDataStore((state) => state.presentIndex);
+  const setPresentIndex = useLinkDataStore((state) => state.setPresentIndex);
+
   const handleRemove = () => {
     removeLink(link.id);
   };
-  
+
+  const handleClick=()=>{
+
+    setPresentIndex(index + 1);
+  } 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
-    addPlatform(e.target.value);
-    console.log("present Index",presentIndex);
-    setPresentIndex(index+1)
+    console.log("present Index", presentIndex);
+    addPlatform({index:presentIndex.toString() ,name:e.target.value});
   };
+
+  const data = useLinkDataStore((state) => state.data);
+  console.log("data", data);
 
   const selectedPlatform = optionData.find(
     (item) => item.value === selectedOption
@@ -47,8 +55,10 @@ const LinkForm = ({ link, index }) => {
       </section>
       <form className="flex flex-col text-[#333333] text-xs gap-1">
         <label htmlFor="platform-select">Platform</label>
-        <section className="flex items-center w-full bg-[#FFFFFF] border border-[#E0E0E0] focus:border-[#633CFF] focus:ring-[#633CFF] focus:ring-1 focus:ring-opacity-50 rounded-lg  pl-4 gap-3">
-          {/* Display the icon of the selected platform */}
+        <section
+        onClick={handleClick}
+        className="flex items-center w-full bg-[#FFFFFF] border border-[#E0E0E0] focus:border-[#633CFF] focus:ring-[#633CFF] focus:ring-1 focus:ring-opacity-50 rounded-lg  pl-4 gap-3">
+          
           {selectedPlatform && (
             <Image
               className=""
@@ -62,6 +72,7 @@ const LinkForm = ({ link, index }) => {
             id="platform-select"
             className="w-[100%]  py-3 outline-none  rounded-r-lg text-base"
             value={selectedOption}
+            
             onChange={handleChange}
           >
             {optionData?.map((item) => (
