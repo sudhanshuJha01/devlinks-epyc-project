@@ -10,7 +10,7 @@ const UpperSection = () => {
           Customize your links
         </h1>
         <p className="text-base text-[#737373] mt-1">
-          
+        Add/edit/remove links below and then share all your profiles with the world!
         </p>
       </article>
       <AddLinkBtn /> 

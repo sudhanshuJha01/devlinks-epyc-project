@@ -1,9 +1,13 @@
-import React from 'react'
-
-const page = () => {
+import React from "react";
+import MokeUpPhone from "../components/leftCard/MokeUpPhone.jsx";
+import ProfileCard from "./components/ProfileCard.jsx"
+const Profile = () => {
   return (
-    <div>page</div>
-  )
-}
+    <main className="w-full max-lg:w-full h-[90%] flex max-md:flex-col  ">
+      <MokeUpPhone/>
+     <ProfileCard/>
+    </main>
+  );
+};
 
-export default page
+export default Profile;
