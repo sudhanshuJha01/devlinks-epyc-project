@@ -9,7 +9,7 @@ const page = () => {
   const subHeading =
     "Please enter your details below to proceed with the application.";
   return (
-    <Container heading={heading} subHeading={subHeading} className={""}>
+    <Container heading={heading} subHeading={subHeading} >
       <section className="my-5 p-1" >
         <InputBox
           id={"email"}
