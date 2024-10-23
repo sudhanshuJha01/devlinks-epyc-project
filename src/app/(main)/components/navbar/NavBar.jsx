@@ -26,13 +26,13 @@ const NavBar = () => {
           className="sm:hidden"
         />
       </figure>
-      <div className="flex items-center justify-center gap-[8px]">
+      <div className="flex items-center justify-center gap-[8px] ">
         <Link href={'/dashboard'}>    
         <LogoButton
           className={
             " max-md:hidden w-[122px] h-[46px] border-2  gap-1 rounded-lg px-[27px] py-[11px]"
           }
-          textClass={"font-semibold text-[#633CFF] text-base w-[40px] h-[24px]"}
+          textClass={"font-semibold text-[#737373] text-base w-[40px] h-[24px]"}
           imageClass={"text-[#633CFF]"}
           label={"Link"}
           type="logo"
@@ -83,7 +83,7 @@ const NavBar = () => {
         />
         </Link>
       </div>
-      <Link href={'/preview'} className="">
+      <Link href={'/share'} className="">
       <Button
         label={"Preview"}
         className={
