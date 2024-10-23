@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 
 import Image from "next/image";
 import optionData from "@/lib/config/optionData.js";
@@ -7,36 +7,45 @@ import { useLinkStore } from "@/lib/store/linkSore.js";
 import { useLinkDataStore } from "@/lib/store/linkData.js";
 
 const LinkForm = ({ link, index }) => {
+
   const [selectedOption, setSelectedOption] = useState(optionData[0]?.value);
   const removeLink = useLinkStore((state) => state.removeLink);
   const addPlatform = useLinkDataStore((state) => state.addPlatform);
+  const removePlatform = useLinkDataStore((state) => state.removePlatform);
   const presentIndex = useLinkDataStore((state) => state.presentIndex);
   const setPresentIndex = useLinkDataStore((state) => state.setPresentIndex);
 
-  const handleRemove = () => {
-    removeLink(link.id);
-  };
-
+  
   const handleClick=()=>{
-
-    setPresentIndex(index + 1);
+    setPresentIndex(index=>index + 1);
+    console.log("present Index" , presentIndex);
+    
   } 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
-    console.log("present Index", presentIndex);
-    addPlatform({index:presentIndex.toString() ,name:e.target.value});
+    console.log("present Index onChange", presentIndex);
+    let obj = optionData.find(item=>item.value===e.target.value)
+    addPlatform({id:link.id,  index:presentIndex.toString() ,...obj});
   };
-
+  
   const data = useLinkDataStore((state) => state.data);
   console.log("data", data);
-
+  
   const selectedPlatform = optionData.find(
     (item) => item.value === selectedOption
   );
-
+  
+  const handleRemove =  () => {
+    removeLink(link.id);
+    console.log("link id " , link.id)
+    removePlatform(link.id)
+    console.log("data in remove", data);
+  };
   return (
     <section className="flex flex-col w-full h-[228px] bg-[#FAFAFA] rounded-lg p-5 justify-center gap-3">
-      <section className="flex items-center justify-between text-[#737373]">
+      <section 
+      onClick={handleClick}
+      className="flex items-center justify-between text-[#737373]">
         <section className="flex items-center justify-center gap-2">
           <Image
             src={"/images/icon-drag-and-drop.svg"}

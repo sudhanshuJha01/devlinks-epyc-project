@@ -3,13 +3,17 @@ import React from "react";
 import RectangularComponent from "./ReactangularComponent.jsx";
 import CircularComponent from "./CircularComponent.jsx";
 import { useLinkDataStore } from "@/lib/store/linkData.js";
+import One from "./conditionalStructure/One.jsx"
+import Two from "./conditionalStructure/Two.jsx"
+import Three from "./conditionalStructure/Three.jsx"
+import Four from "./conditionalStructure/Four.jsx"
 
-const PhoneMokeUp = ({ index }) => {
-  const presentIndex = useLinkDataStore((state) => state.presentIndex);
+const PhoneMokeUp = () => {
+
   const data = useLinkDataStore((state) => state.data);
-  console.log("dataLen", Object.keys(data).length);
+  console.log("data", Object.keys(data).length);
+ let arr = Object.keys(data)
   let len = Object.keys(data).length;
-  const arr = Object.keys(data)
   
   return (
     <section className="flex flex-col items-center gap-14 justify-center w-[237px] h-[514px]">
@@ -20,36 +24,12 @@ const PhoneMokeUp = ({ index }) => {
           <RectangularComponent width="72px" height="8px" />
         </section>
       </section>
-      {len < 5 ? (
-        <section className="flex flex-col items-center justify-center gap-5 ">
-          {data["1"] ? (
-            <RectangularComponent  content={data["1"].name} />
-          ) : (
-            <RectangularComponent />
-          )}
-          {data["2"] ? (
-            <RectangularComponent content={data["2"].name} />
-          ) : (
-            <RectangularComponent />
-          )}
-          {data["3"] ? (
-            <RectangularComponent content={data["3"].name} />
-          ) : (
-            <RectangularComponent />
-          )}
-          {data["4"] ? (
-            <RectangularComponent content={data["4"].name} />
-          ) : (
-            <RectangularComponent />
-          )}
-        </section>
-      ) : (
-        <section className="flex flex-col items-center justify-center gap-5 overflow-y-scroll">
-          {arr.map(item=>(
-             <RectangularComponent key={item} content={data[item].name} />
-          ))}
-        </section>
-      )}
+      {len >= 4 ?<Four arr={arr} data={data}/>:len==1?<One arr={arr}  data={data}/>:len==2?<Two arr={arr}  data={data}/>:len==3?<Three arr={arr}  data={data}/>:<section className="flex flex-col items-center justify-center gap-5 ">
+   <RectangularComponent />
+   <RectangularComponent />
+   <RectangularComponent />
+   <RectangularComponent />
+</section>}
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { nanoid } from 'nanoid'; // Generates unique IDs
+import { nanoid } from 'nanoid'; 
 
 export const useLinkStore = create((set) => ({
     links: [], 
