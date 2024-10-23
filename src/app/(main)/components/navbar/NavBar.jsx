@@ -92,7 +92,7 @@ const NavBar = () => {
         classT={"w-[60px] h-[24px] text-base font-semibold"}
       />
       </Link>
-  <Link className="sm:hidden" href={'/preview'}>  
+  <Link className="sm:hidden" href={'/share'}>  
          <LogoButton
          type="logo"
           className={

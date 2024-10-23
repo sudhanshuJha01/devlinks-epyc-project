@@ -2,12 +2,24 @@
 import React , {useState} from 'react'
 import Button from "@/components/buttons/Button.jsx";
 import {useLinkStore} from "@/lib/store/linkSore.js";
+import {useAddCounterStore} from "@/lib/store/addCounter.js"
 const AddLinkBtn = ({setCnt , cnt}) => {
   const [linkCnt , setLinkCnt] = useState(0)
+  // const setAddCounter = useAddCounterStore(state=>state.setAddCounter)
+  // const setGlobalError = useAddCounterStore(state=>state.setGlobalError)
+  // const error = useAddCounterStore(state=>state.error)
     const addLink = useLinkStore((state) => state.addLink);
+    const  links = useLinkStore((state) => state. links);
+    let len = links.length;
     const handleAddLink = ()=>{
-      setLinkCnt(linkCnt+1)
-      addLink(linkCnt);
+      // if(!error){
+      if(len<4){
+        setLinkCnt(linkCnt+1);
+        addLink(linkCnt);
+        // setAddCounter();
+        // setGlobalError(false)
+      }
+      // }
     }
   return (
     <Button
