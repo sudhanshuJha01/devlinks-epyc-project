@@ -8,12 +8,13 @@ const RectangularComponent = ({ content, width = '237px', height = '44px', bgCol
     <Link
      href={`${obj?.url}`}
      target='main'
-      className={ `cursor-pointer flex items-center justify-around rounded-lg w-[237px] 2-[44px] ${className} text-white text-lg`}
+      className={ `cursor-pointer flex items-center justify-around rounded-lg w-[237px] 2-[44px] ${className}  text-lg`}
       style={{
         width: width,
         height: height,
         backgroundColor: obj?.color || bgColor,
         borderColor: borderColor,
+        color:obj?.color?"white":"black"
       }}
     >
        {obj?.icon ? <Image
