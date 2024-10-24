@@ -8,7 +8,7 @@ import { useLinkDataStore } from "@/lib/store/linkData.js";
 import {useAddCounterStore} from "@/lib/store/addCounter.js"
  
 const LinkForm = ({ link, index }) => {
-  // const [customUrl, setCustomUrl] = useState('');
+  const [customUrl, setCustomUrl] = useState('');
   // const [error, setError] = useState('');
   const [selectedOption, setSelectedOption] = useState(optionData[0]?.value);
   const removeLink = useLinkStore((state) => state.removeLink);
@@ -29,7 +29,7 @@ const LinkForm = ({ link, index }) => {
     setSelectedOption(e.target.value);
     console.log("present Index onChange", presentIndex);
     let obj = optionData.find(item=>item.value===e.target.value)
-    addPlatform({id:link.id,  index:presentIndex.toString() ,...obj});
+    addPlatform({id:link.id, cUrl:customUrl,  index:presentIndex.toString() ,...obj});
   };
   
   const data = useLinkDataStore((state) => state.data);
@@ -118,7 +118,7 @@ const LinkForm = ({ link, index }) => {
       <form className="flex flex-col text-[#333333] text-xs gap-1">
       <label htmlFor="url">Link</label>
       <input
-        // onChange={handleCustomUrl}
+        onChange={(e)=>{setCustomUrl(e.target.value)}}
         className={`p-4 rounded-lg bg-[#FFFFFF] border border-[#E0E0E0] focus:outline-none focus:border-[#633CFF] focus:ring-[#633CFF] focus:ring-1 focus:ring-opacity-50 stroke-[#D9D9D9] `}
         // ${error ? 'border-red-500' : ''} in class name if error feature implemented
         type="url"
